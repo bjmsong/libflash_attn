@@ -75,6 +75,7 @@ void flash_attention_forward(const half* q_ptr,
   CHECK(head_dim % 8 == 0);
   CHECK(head_dim <= 256);
 
+  // 将整数 x 向上取整为最接近的 m 的倍数
   auto round_multiple = [](int x, int m) { return (x + m - 1) / m * m; };
   const int head_dim_rounded = round_multiple(head_dim, 32);
   const int seqlen_q_rounded = round_multiple(seqlen_q, 128);
