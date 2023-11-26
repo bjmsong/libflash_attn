@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cuda-gdb",
+            "request": "launch",
+            "name": "CUDA C++: Launch",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/build/src/main"
+            // "args": ""
+        }
+    ]
+}

@@ -1,5 +1,6 @@
+cmake_minimum_required (VERSION 3.12)
 project(flash-attention LANGUAGES CXX CUDA)
 set(CMAKE_CXX_STANDARD 17)
 set(CUTLASS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/cutlass)
-
+enable_language(CUDA)
 add_subdirectory(src)
