@@ -1,7 +1,3 @@
-# set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} --expt-relaxed-constexpr --expt-relaxed-constexpr --use_fast_math -t 30 \
-#                       -gencode=arch=compute_75,code=\\\"sm_75,compute_75\\\" \
-#                       ")
-                      
 set (CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -std=c++17 --expt-relaxed-constexpr --use_fast_math")
 if (${CMAKE_BUILD_TYPE} MATCHES "Debug")
     set(CMAKE_CUDA_FLAGS "${CMAKE_CUDA_FLAGS} -arch=sm_${CMAKE_CUDA_ARCHITECTURES} -g -lineinfo -O0")

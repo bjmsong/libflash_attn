@@ -1,8 +1,4 @@
-// Copyright 2023. All Rights Reserved.
-// Author: Bruce-Lee-LY
-// Date: 20:42:28 on Sun, Feb 12, 2023
-//
-// Description: logging
+// https://github.com/bjmsong/flash_attention_inference/blob/master/src/common/logging.h
 
 #pragma once
 

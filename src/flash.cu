@@ -22,11 +22,12 @@ void run(Flash_fwd_params params, cudaStream_t stream) {
         &major, cudaDevAttrComputeCapabilityMajor, device);
   cudaDeviceGetAttribute(
         &minor, cudaDevAttrComputeCapabilityMinor, device);
-  params.sm = major * 10 + minor;
+  params.sm = major * 10 + minor;   // Compute Capbility eg. 75
 
   auto head_dim = params.d;
 
   if (head_dim <= 32) {
+    // 调用模板函数
     run_mha_fwd_<half, 32>(params, stream);
   } else if (head_dim <= 64) {
     run_mha_fwd_<half, 64>(params, stream);

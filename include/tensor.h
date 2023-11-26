@@ -1,3 +1,5 @@
+// https://github.com/bjmsong/flash_attention_inference/blob/master/src/common/tensor.h
+
 #pragma once
 
 #include <random>
